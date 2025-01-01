@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	sdk "github.com/friendsofshopware/go-shopware-admin-api-sdk"
+	sdk "github.com/xchanming/go-cicada-admin-api-sdk"
 	"log"
 	"os"
 )

@@ -1,10 +1,10 @@
-module github.com/friendsofshopware/go-shopware-admin-api-sdk/example
+module github.com/xchanming/go-cicada-admin-api-sdk/example
 
 go 1.18
 
-replace github.com/friendsofshopware/go-shopware-admin-api-sdk => ../
+replace github.com/xchanming/go-cicada-admin-api-sdk => ../
 
-require github.com/friendsofshopware/go-shopware-admin-api-sdk v0.0.0-00010101000000-000000000000
+require github.com/xchanming/go-cicada-admin-api-sdk v0.0.0-00010101000000-000000000000
 
 require (
 	github.com/golang/protobuf v1.5.3 // indirect

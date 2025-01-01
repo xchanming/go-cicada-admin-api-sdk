@@ -1,4 +1,4 @@
-module github.com/friendsofshopware/go-shopware-admin-api-sdk/generator
+module github.com/xchanming/go-cicada-admin-api-sdk/generator
 
 go 1.17
 
