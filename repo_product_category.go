@@ -97,8 +97,6 @@ func (t ProductCategoryRepository) Delete(ctx ApiContext, ids []string) (*http.R
 }
 
 type ProductCategory struct {
-	Category *Category `json:"category,omitempty"`
-
 	ProductId string `json:"productId,omitempty"`
 
 	ProductVersionId string `json:"productVersionId,omitempty"`
@@ -108,6 +106,8 @@ type ProductCategory struct {
 	CategoryVersionId string `json:"categoryVersionId,omitempty"`
 
 	Product *Product `json:"product,omitempty"`
+
+	Category *Category `json:"category,omitempty"`
 }
 
 type ProductCategoryCollection struct {

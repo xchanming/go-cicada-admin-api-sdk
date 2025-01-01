@@ -99,31 +99,31 @@ func (t ProductPriceRepository) Delete(ctx ApiContext, ids []string) (*http.Resp
 }
 
 type ProductPrice struct {
-	ProductVersionId string `json:"productVersionId,omitempty"`
-
-	Price interface{} `json:"price,omitempty"`
-
-	CustomFields interface{} `json:"customFields,omitempty"`
-
-	CreatedAt time.Time `json:"createdAt,omitempty"`
-
-	QuantityEnd float64 `json:"quantityEnd,omitempty"`
-
 	RuleId string `json:"ruleId,omitempty"`
+
+	Product *Product `json:"product,omitempty"`
 
 	Rule *Rule `json:"rule,omitempty"`
 
-	Id string `json:"id,omitempty"`
+	CustomFields interface{} `json:"customFields,omitempty"`
+
+	UpdatedAt time.Time `json:"updatedAt,omitempty"`
 
 	VersionId string `json:"versionId,omitempty"`
 
 	ProductId string `json:"productId,omitempty"`
 
+	ProductVersionId string `json:"productVersionId,omitempty"`
+
+	Price interface{} `json:"price,omitempty"`
+
 	QuantityStart float64 `json:"quantityStart,omitempty"`
 
-	Product *Product `json:"product,omitempty"`
+	QuantityEnd float64 `json:"quantityEnd,omitempty"`
 
-	UpdatedAt time.Time `json:"updatedAt,omitempty"`
+	CreatedAt time.Time `json:"createdAt,omitempty"`
+
+	Id string `json:"id,omitempty"`
 }
 
 type ProductPriceCollection struct {

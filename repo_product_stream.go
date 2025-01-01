@@ -99,33 +99,33 @@ func (t ProductStreamRepository) Delete(ctx ApiContext, ids []string) (*http.Res
 }
 
 type ProductStream struct {
-	Translations []ProductStreamTranslation `json:"translations,omitempty"`
+	Invalid bool `json:"invalid,omitempty"`
 
-	ProductCrossSellings []ProductCrossSelling `json:"productCrossSellings,omitempty"`
+	Name string `json:"name,omitempty"`
+
+	Description string `json:"description,omitempty"`
 
 	ProductExports []ProductExport `json:"productExports,omitempty"`
 
-	Categories []Category `json:"categories,omitempty"`
-
-	ApiFilter interface{} `json:"apiFilter,omitempty"`
-
-	CustomFields interface{} `json:"customFields,omitempty"`
-
 	Filters []ProductStreamFilter `json:"filters,omitempty"`
+
+	ProductCrossSellings []ProductCrossSelling `json:"productCrossSellings,omitempty"`
+
+	Translated interface{} `json:"translated,omitempty"`
+
+	Categories []Category `json:"categories,omitempty"`
 
 	CreatedAt time.Time `json:"createdAt,omitempty"`
 
 	Id string `json:"id,omitempty"`
 
-	Translated interface{} `json:"translated,omitempty"`
+	ApiFilter interface{} `json:"apiFilter,omitempty"`
 
-	Description string `json:"description,omitempty"`
+	CustomFields interface{} `json:"customFields,omitempty"`
 
-	Name string `json:"name,omitempty"`
+	Translations []ProductStreamTranslation `json:"translations,omitempty"`
 
 	UpdatedAt time.Time `json:"updatedAt,omitempty"`
-
-	Invalid bool `json:"invalid,omitempty"`
 }
 
 type ProductStreamCollection struct {

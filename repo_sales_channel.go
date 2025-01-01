@@ -187,8 +187,6 @@ type SalesChannel struct {
 
 	HomeCmsPage *CmsPage `json:"homeCmsPage,omitempty"`
 
-	DocumentBaseConfigSalesChannels []DocumentBaseConfigSalesChannel `json:"documentBaseConfigSalesChannels,omitempty"`
-
 	SeoUrlTemplates []SeoUrlTemplate `json:"seoUrlTemplates,omitempty"`
 
 	FooterCategoryVersionId string `json:"footerCategoryVersionId,omitempty"`

@@ -99,29 +99,27 @@ func (t ProductMediaRepository) Delete(ctx ApiContext, ids []string) (*http.Resp
 }
 
 type ProductMedia struct {
-	CustomFields interface{} `json:"customFields,omitempty"`
-
-	CreatedAt time.Time `json:"createdAt,omitempty"`
+	Media *Media `json:"media,omitempty"`
 
 	UpdatedAt time.Time `json:"updatedAt,omitempty"`
 
 	ProductId string `json:"productId,omitempty"`
 
-	VersionId string `json:"versionId,omitempty"`
+	MediaId string `json:"mediaId,omitempty"`
 
 	ProductVersionId string `json:"productVersionId,omitempty"`
-
-	MediaId string `json:"mediaId,omitempty"`
 
 	Position float64 `json:"position,omitempty"`
 
 	Product *Product `json:"product,omitempty"`
 
-	Media *Media `json:"media,omitempty"`
+	CustomFields interface{} `json:"customFields,omitempty"`
 
-	CoverProducts []Product `json:"coverProducts,omitempty"`
+	CreatedAt time.Time `json:"createdAt,omitempty"`
 
 	Id string `json:"id,omitempty"`
+
+	VersionId string `json:"versionId,omitempty"`
 }
 
 type ProductMediaCollection struct {

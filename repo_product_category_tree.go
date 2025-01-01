@@ -97,10 +97,6 @@ func (t ProductCategoryTreeRepository) Delete(ctx ApiContext, ids []string) (*ht
 }
 
 type ProductCategoryTree struct {
-	ProductId string `json:"productId,omitempty"`
-
-	ProductVersionId string `json:"productVersionId,omitempty"`
-
 	CategoryId string `json:"categoryId,omitempty"`
 
 	CategoryVersionId string `json:"categoryVersionId,omitempty"`
@@ -108,6 +104,10 @@ type ProductCategoryTree struct {
 	Product *Product `json:"product,omitempty"`
 
 	Category *Category `json:"category,omitempty"`
+
+	ProductId string `json:"productId,omitempty"`
+
+	ProductVersionId string `json:"productVersionId,omitempty"`
 }
 
 type ProductCategoryTreeCollection struct {

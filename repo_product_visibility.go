@@ -99,19 +99,19 @@ func (t ProductVisibilityRepository) Delete(ctx ApiContext, ids []string) (*http
 }
 
 type ProductVisibility struct {
+	UpdatedAt time.Time `json:"updatedAt,omitempty"`
+
+	Id string `json:"id,omitempty"`
+
+	ProductId string `json:"productId,omitempty"`
+
 	SalesChannel *SalesChannel `json:"salesChannel,omitempty"`
 
 	Product *Product `json:"product,omitempty"`
 
-	UpdatedAt time.Time `json:"updatedAt,omitempty"`
-
-	ProductId string `json:"productId,omitempty"`
-
 	ProductVersionId string `json:"productVersionId,omitempty"`
 
 	SalesChannelId string `json:"salesChannelId,omitempty"`
-
-	Id string `json:"id,omitempty"`
 
 	Visibility float64 `json:"visibility,omitempty"`
 

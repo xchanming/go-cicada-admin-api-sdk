@@ -99,27 +99,27 @@ func (t ProductSortingRepository) Delete(ctx ApiContext, ids []string) (*http.Re
 }
 
 type ProductSorting struct {
-	Id string `json:"id,omitempty"`
-
 	Key string `json:"key,omitempty"`
 
-	Fields interface{} `json:"fields,omitempty"`
+	Priority float64 `json:"priority,omitempty"`
 
-	CreatedAt time.Time `json:"createdAt,omitempty"`
+	Translations []ProductSortingTranslation `json:"translations,omitempty"`
 
 	UpdatedAt time.Time `json:"updatedAt,omitempty"`
 
 	Translated interface{} `json:"translated,omitempty"`
 
-	Locked bool `json:"locked,omitempty"`
+	CreatedAt time.Time `json:"createdAt,omitempty"`
 
-	Priority float64 `json:"priority,omitempty"`
+	Id string `json:"id,omitempty"`
+
+	Locked bool `json:"locked,omitempty"`
 
 	Active bool `json:"active,omitempty"`
 
-	Label string `json:"label,omitempty"`
+	Fields interface{} `json:"fields,omitempty"`
 
-	Translations []ProductSortingTranslation `json:"translations,omitempty"`
+	Label string `json:"label,omitempty"`
 }
 
 type ProductSortingCollection struct {

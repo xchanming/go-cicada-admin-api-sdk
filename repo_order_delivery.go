@@ -99,45 +99,45 @@ func (t OrderDeliveryRepository) Delete(ctx ApiContext, ids []string) (*http.Res
 }
 
 type OrderDelivery struct {
-	StateId string `json:"stateId,omitempty"`
+	CustomFields interface{} `json:"customFields,omitempty"`
 
-	StateMachineState *StateMachineState `json:"stateMachineState,omitempty"`
+	ShippingMethod *ShippingMethod `json:"shippingMethod,omitempty"`
+
+	CreatedAt time.Time `json:"createdAt,omitempty"`
 
 	TrackingCodes interface{} `json:"trackingCodes,omitempty"`
 
-	ShippingOrderAddress *OrderAddress `json:"shippingOrderAddress,omitempty"`
+	ShippingDateEarliest time.Time `json:"shippingDateEarliest,omitempty"`
 
 	ShippingOrderAddressVersionId string `json:"shippingOrderAddressVersionId,omitempty"`
 
-	VersionId string `json:"versionId,omitempty"`
+	ShippingMethodId string `json:"shippingMethodId,omitempty"`
+
+	ShippingDateLatest time.Time `json:"shippingDateLatest,omitempty"`
+
+	ShippingOrderAddress *OrderAddress `json:"shippingOrderAddress,omitempty"`
+
+	OrderId string `json:"orderId,omitempty"`
 
 	OrderVersionId string `json:"orderVersionId,omitempty"`
 
-	ShippingDateEarliest time.Time `json:"shippingDateEarliest,omitempty"`
+	StateId string `json:"stateId,omitempty"`
+
+	Id string `json:"id,omitempty"`
+
+	VersionId string `json:"versionId,omitempty"`
 
 	ShippingCosts interface{} `json:"shippingCosts,omitempty"`
 
 	Order *Order `json:"order,omitempty"`
 
-	UpdatedAt time.Time `json:"updatedAt,omitempty"`
+	Positions []OrderDeliveryPosition `json:"positions,omitempty"`
 
-	Id string `json:"id,omitempty"`
+	UpdatedAt time.Time `json:"updatedAt,omitempty"`
 
 	ShippingOrderAddressId string `json:"shippingOrderAddressId,omitempty"`
 
-	ShippingDateLatest time.Time `json:"shippingDateLatest,omitempty"`
-
-	Positions []OrderDeliveryPosition `json:"positions,omitempty"`
-
-	CreatedAt time.Time `json:"createdAt,omitempty"`
-
-	OrderId string `json:"orderId,omitempty"`
-
-	CustomFields interface{} `json:"customFields,omitempty"`
-
-	ShippingMethod *ShippingMethod `json:"shippingMethod,omitempty"`
-
-	ShippingMethodId string `json:"shippingMethodId,omitempty"`
+	StateMachineState *StateMachineState `json:"stateMachineState,omitempty"`
 }
 
 type OrderDeliveryCollection struct {

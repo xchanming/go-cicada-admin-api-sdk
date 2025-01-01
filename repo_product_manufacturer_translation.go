@@ -99,25 +99,25 @@ func (t ProductManufacturerTranslationRepository) Delete(ctx ApiContext, ids []s
 }
 
 type ProductManufacturerTranslation struct {
+	ProductManufacturerId string `json:"productManufacturerId,omitempty"`
+
+	Name string `json:"name,omitempty"`
+
+	Description string `json:"description,omitempty"`
+
 	CreatedAt time.Time `json:"createdAt,omitempty"`
+
+	ProductManufacturer *ProductManufacturer `json:"productManufacturer,omitempty"`
+
+	Language *Language `json:"language,omitempty"`
+
+	ProductManufacturerVersionId string `json:"productManufacturerVersionId,omitempty"`
+
+	CustomFields interface{} `json:"customFields,omitempty"`
 
 	UpdatedAt time.Time `json:"updatedAt,omitempty"`
 
 	LanguageId string `json:"languageId,omitempty"`
-
-	Language *Language `json:"language,omitempty"`
-
-	Name string `json:"name,omitempty"`
-
-	CustomFields interface{} `json:"customFields,omitempty"`
-
-	ProductManufacturerId string `json:"productManufacturerId,omitempty"`
-
-	ProductManufacturer *ProductManufacturer `json:"productManufacturer,omitempty"`
-
-	ProductManufacturerVersionId string `json:"productManufacturerVersionId,omitempty"`
-
-	Description string `json:"description,omitempty"`
 }
 
 type ProductManufacturerTranslationCollection struct {

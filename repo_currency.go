@@ -99,51 +99,45 @@ func (t CurrencyRepository) Delete(ctx ApiContext, ids []string) (*http.Response
 }
 
 type Currency struct {
-	CountryRoundings []CurrencyCountryRounding `json:"countryRoundings,omitempty"`
-
-	CreatedAt time.Time `json:"createdAt,omitempty"`
-
-	Name string `json:"name,omitempty"`
-
-	CustomFields interface{} `json:"customFields,omitempty"`
-
-	Orders []Order `json:"orders,omitempty"`
-
-	SalesChannels []SalesChannel `json:"salesChannels,omitempty"`
-
-	TotalRounding interface{} `json:"totalRounding,omitempty"`
-
-	Symbol string `json:"symbol,omitempty"`
-
-	IsSystemDefault bool `json:"isSystemDefault,omitempty"`
-
-	ItemRounding interface{} `json:"itemRounding,omitempty"`
+	ProductExports []ProductExport `json:"productExports,omitempty"`
 
 	UpdatedAt time.Time `json:"updatedAt,omitempty"`
 
-	PromotionDiscountPrices []PromotionDiscountPrices `json:"promotionDiscountPrices,omitempty"`
+	SalesChannelDefaultAssignments []SalesChannel `json:"salesChannelDefaultAssignments,omitempty"`
+
+	SalesChannels []SalesChannel `json:"salesChannels,omitempty"`
+
+	IsSystemDefault bool `json:"isSystemDefault,omitempty"`
+
+	Translations []CurrencyTranslation `json:"translations,omitempty"`
+
+	Orders []Order `json:"orders,omitempty"`
+
+	IsoCode string `json:"isoCode,omitempty"`
+
+	Name string `json:"name,omitempty"`
+
+	ShortName string `json:"shortName,omitempty"`
+
+	DecimalPrecision float64 `json:"decimalPrecision,omitempty"`
+
+	Translated interface{} `json:"translated,omitempty"`
 
 	Id string `json:"id,omitempty"`
+
+	Symbol string `json:"symbol,omitempty"`
+
+	CustomFields interface{} `json:"customFields,omitempty"`
+
+	SalesChannelDomains []SalesChannelDomain `json:"salesChannelDomains,omitempty"`
+
+	PromotionDiscountPrices []PromotionDiscountPrices `json:"promotionDiscountPrices,omitempty"`
+
+	CreatedAt time.Time `json:"createdAt,omitempty"`
 
 	Factor float64 `json:"factor,omitempty"`
 
 	Position float64 `json:"position,omitempty"`
-
-	TaxFreeFrom float64 `json:"taxFreeFrom,omitempty"`
-
-	Translations []CurrencyTranslation `json:"translations,omitempty"`
-
-	Translated interface{} `json:"translated,omitempty"`
-
-	IsoCode string `json:"isoCode,omitempty"`
-
-	ShortName string `json:"shortName,omitempty"`
-
-	SalesChannelDefaultAssignments []SalesChannel `json:"salesChannelDefaultAssignments,omitempty"`
-
-	SalesChannelDomains []SalesChannelDomain `json:"salesChannelDomains,omitempty"`
-
-	ProductExports []ProductExport `json:"productExports,omitempty"`
 }
 
 type CurrencyCollection struct {

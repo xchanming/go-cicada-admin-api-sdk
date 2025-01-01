@@ -99,57 +99,59 @@ func (t OrderAddressRepository) Delete(ctx ApiContext, ids []string) (*http.Resp
 }
 
 type OrderAddress struct {
-	Name string `json:"Name,omitempty"`
+	AdditionalAddressLine1 string `json:"additionalAddressLine1,omitempty"`
 
 	CustomFields interface{} `json:"customFields,omitempty"`
 
-	Id string `json:"id,omitempty"`
+	VersionId string `json:"versionId,omitempty"`
 
-	CountryId string `json:"countryId,omitempty"`
-
-	CountryStateId string `json:"countryStateId,omitempty"`
-
-	VatId string `json:"vatId,omitempty"`
-
-	AdditionalAddressLine1 string `json:"additionalAddressLine1,omitempty"`
-
-	Country *Country `json:"country,omitempty"`
+	FirstName string `json:"firstName,omitempty"`
 
 	Order *Order `json:"order,omitempty"`
 
-	CreatedAt time.Time `json:"createdAt,omitempty"`
+	Street string `json:"street,omitempty"`
 
-	OrderVersionId string `json:"orderVersionId,omitempty"`
-
-	Title string `json:"title,omitempty"`
-
-	OrderDeliveries []OrderDelivery `json:"orderDeliveries,omitempty"`
-
-	PhoneNumber string `json:"phoneNumber,omitempty"`
+	VatId string `json:"vatId,omitempty"`
 
 	AdditionalAddressLine2 string `json:"additionalAddressLine2,omitempty"`
 
-	CountryState *CountryState `json:"countryState,omitempty"`
-
-	SalutationId string `json:"salutationId,omitempty"`
-
-	Street string `json:"street,omitempty"`
-
-	UpdatedAt time.Time `json:"updatedAt,omitempty"`
+	LastName string `json:"lastName,omitempty"`
 
 	Company string `json:"company,omitempty"`
 
+	PhoneNumber string `json:"phoneNumber,omitempty"`
+
+	CountryId string `json:"countryId,omitempty"`
+
+	OrderVersionId string `json:"orderVersionId,omitempty"`
+
 	Department string `json:"department,omitempty"`
+
+	Title string `json:"title,omitempty"`
+
+	Id string `json:"id,omitempty"`
 
 	OrderId string `json:"orderId,omitempty"`
 
+	CreatedAt time.Time `json:"createdAt,omitempty"`
+
+	SalutationId string `json:"salutationId,omitempty"`
+
 	City string `json:"city,omitempty"`
+
+	Country *Country `json:"country,omitempty"`
 
 	Salutation *Salutation `json:"salutation,omitempty"`
 
-	VersionId string `json:"versionId,omitempty"`
+	UpdatedAt time.Time `json:"updatedAt,omitempty"`
+
+	CountryStateId string `json:"countryStateId,omitempty"`
 
 	Zipcode string `json:"zipcode,omitempty"`
+
+	CountryState *CountryState `json:"countryState,omitempty"`
+
+	OrderDeliveries []OrderDelivery `json:"orderDeliveries,omitempty"`
 }
 
 type OrderAddressCollection struct {

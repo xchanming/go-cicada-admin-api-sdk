@@ -99,57 +99,55 @@ func (t ProductExportRepository) Delete(ctx ApiContext, ids []string) (*http.Res
 }
 
 type ProductExport struct {
-	Id string `json:"id,omitempty"`
-
-	StorefrontSalesChannelId string `json:"storefrontSalesChannelId,omitempty"`
-
-	FooterTemplate string `json:"footerTemplate,omitempty"`
-
-	Currency *Currency `json:"currency,omitempty"`
-
-	SalesChannelDomainId string `json:"salesChannelDomainId,omitempty"`
-
-	Encoding string `json:"encoding,omitempty"`
-
-	ProductStreamId string `json:"productStreamId,omitempty"`
-
-	SalesChannelId string `json:"salesChannelId,omitempty"`
-
-	AccessKey string `json:"accessKey,omitempty"`
-
-	GeneratedAt time.Time `json:"generatedAt,omitempty"`
-
-	IsRunning bool `json:"isRunning,omitempty"`
-
-	BodyTemplate string `json:"bodyTemplate,omitempty"`
-
 	PausedSchedule bool `json:"pausedSchedule,omitempty"`
-
-	ProductStream *ProductStream `json:"productStream,omitempty"`
-
-	SalesChannel *SalesChannel `json:"salesChannel,omitempty"`
-
-	FileFormat string `json:"fileFormat,omitempty"`
-
-	SalesChannelDomain *SalesChannelDomain `json:"salesChannelDomain,omitempty"`
-
-	UpdatedAt time.Time `json:"updatedAt,omitempty"`
-
-	CurrencyId string `json:"currencyId,omitempty"`
-
-	FileName string `json:"fileName,omitempty"`
-
-	IncludeVariants bool `json:"includeVariants,omitempty"`
-
-	GenerateByCronjob bool `json:"generateByCronjob,omitempty"`
-
-	HeaderTemplate string `json:"headerTemplate,omitempty"`
 
 	StorefrontSalesChannel *SalesChannel `json:"storefrontSalesChannel,omitempty"`
 
 	CreatedAt time.Time `json:"createdAt,omitempty"`
 
+	UpdatedAt time.Time `json:"updatedAt,omitempty"`
+
+	SalesChannelId string `json:"salesChannelId,omitempty"`
+
+	FileName string `json:"fileName,omitempty"`
+
+	FileFormat string `json:"fileFormat,omitempty"`
+
 	Interval float64 `json:"interval,omitempty"`
+
+	FooterTemplate string `json:"footerTemplate,omitempty"`
+
+	SalesChannel *SalesChannel `json:"salesChannel,omitempty"`
+
+	SalesChannelDomain *SalesChannelDomain `json:"salesChannelDomain,omitempty"`
+
+	Currency *Currency `json:"currency,omitempty"`
+
+	Id string `json:"id,omitempty"`
+
+	CurrencyId string `json:"currencyId,omitempty"`
+
+	IncludeVariants bool `json:"includeVariants,omitempty"`
+
+	GeneratedAt time.Time `json:"generatedAt,omitempty"`
+
+	Encoding string `json:"encoding,omitempty"`
+
+	GenerateByCronjob bool `json:"generateByCronjob,omitempty"`
+
+	ProductStream *ProductStream `json:"productStream,omitempty"`
+
+	ProductStreamId string `json:"productStreamId,omitempty"`
+
+	StorefrontSalesChannelId string `json:"storefrontSalesChannelId,omitempty"`
+
+	SalesChannelDomainId string `json:"salesChannelDomainId,omitempty"`
+
+	AccessKey string `json:"accessKey,omitempty"`
+
+	HeaderTemplate string `json:"headerTemplate,omitempty"`
+
+	BodyTemplate string `json:"bodyTemplate,omitempty"`
 }
 
 type ProductExportCollection struct {

@@ -99,15 +99,9 @@ func (t ProductSearchKeywordRepository) Delete(ctx ApiContext, ids []string) (*h
 }
 
 type ProductSearchKeyword struct {
-	LanguageId string `json:"languageId,omitempty"`
-
-	ProductId string `json:"productId,omitempty"`
-
-	ProductVersionId string `json:"productVersionId,omitempty"`
-
 	Keyword string `json:"keyword,omitempty"`
 
-	Ranking float64 `json:"ranking,omitempty"`
+	Product *Product `json:"product,omitempty"`
 
 	Language *Language `json:"language,omitempty"`
 
@@ -115,11 +109,17 @@ type ProductSearchKeyword struct {
 
 	Id string `json:"id,omitempty"`
 
-	VersionId string `json:"versionId,omitempty"`
+	LanguageId string `json:"languageId,omitempty"`
 
-	Product *Product `json:"product,omitempty"`
+	ProductVersionId string `json:"productVersionId,omitempty"`
+
+	Ranking float64 `json:"ranking,omitempty"`
 
 	UpdatedAt time.Time `json:"updatedAt,omitempty"`
+
+	VersionId string `json:"versionId,omitempty"`
+
+	ProductId string `json:"productId,omitempty"`
 }
 
 type ProductSearchKeywordCollection struct {

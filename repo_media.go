@@ -151,8 +151,6 @@ type Media struct {
 
 	UploadedAt time.Time `json:"uploadedAt,omitempty"`
 
-	DocumentBaseConfigs []DocumentBaseConfig `json:"documentBaseConfigs,omitempty"`
-
 	ThumbnailsRo interface{} `json:"thumbnailsRo,omitempty"`
 
 	MimeType string `json:"mimeType,omitempty"`
@@ -184,8 +182,6 @@ type Media struct {
 	ProductManufacturers []ProductManufacturer `json:"productManufacturers,omitempty"`
 
 	MailTemplateMedia []MailTemplateMedia `json:"mailTemplateMedia,omitempty"`
-
-	Documents []Document `json:"documents,omitempty"`
 
 	Translated interface{} `json:"translated,omitempty"`
 

@@ -99,43 +99,43 @@ func (t OrderCustomerRepository) Delete(ctx ApiContext, ids []string) (*http.Res
 }
 
 type OrderCustomer struct {
-	CustomFields interface{} `json:"customFields,omitempty"`
-
-	OrderId string `json:"orderId,omitempty"`
-
-	Title string `json:"title,omitempty"`
-
-	VatIds interface{} `json:"vatIds,omitempty"`
-
-	Customer *Customer `json:"customer,omitempty"`
-
-	Salutation *Salutation `json:"salutation,omitempty"`
-
-	UpdatedAt time.Time `json:"updatedAt,omitempty"`
-
-	CreatedAt time.Time `json:"createdAt,omitempty"`
-
-	VersionId string `json:"versionId,omitempty"`
-
 	Email string `json:"email,omitempty"`
 
-	SalutationId string `json:"salutationId,omitempty"`
+	LastName string `json:"lastName,omitempty"`
 
 	CustomerNumber string `json:"customerNumber,omitempty"`
 
-	Order *Order `json:"order,omitempty"`
+	Customer *Customer `json:"customer,omitempty"`
 
-	Id string `json:"id,omitempty"`
+	UpdatedAt time.Time `json:"updatedAt,omitempty"`
 
 	CustomerId string `json:"customerId,omitempty"`
 
-	OrderVersionId string `json:"orderVersionId,omitempty"`
+	Salutation *Salutation `json:"salutation,omitempty"`
 
-	Name string `json:"name,omitempty"`
+	RemoteAddress interface{} `json:"remoteAddress,omitempty"`
+
+	FirstName string `json:"firstName,omitempty"`
 
 	Company string `json:"company,omitempty"`
 
-	RemoteAddress interface{} `json:"remoteAddress,omitempty"`
+	SalutationId string `json:"salutationId,omitempty"`
+
+	VersionId string `json:"versionId,omitempty"`
+
+	OrderId string `json:"orderId,omitempty"`
+
+	OrderVersionId string `json:"orderVersionId,omitempty"`
+
+	Title string `json:"title,omitempty"`
+
+	CustomFields interface{} `json:"customFields,omitempty"`
+
+	Order *Order `json:"order,omitempty"`
+
+	CreatedAt time.Time `json:"createdAt,omitempty"`
+
+	Id string `json:"id,omitempty"`
 }
 
 type OrderCustomerCollection struct {

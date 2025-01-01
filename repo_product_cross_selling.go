@@ -99,41 +99,41 @@ func (t ProductCrossSellingRepository) Delete(ctx ApiContext, ids []string) (*ht
 }
 
 type ProductCrossSelling struct {
-	Type string `json:"type,omitempty"`
+	Name string `json:"name,omitempty"`
 
-	ProductVersionId string `json:"productVersionId,omitempty"`
+	Position float64 `json:"position,omitempty"`
 
-	ProductStream *ProductStream `json:"productStream,omitempty"`
+	Active bool `json:"active,omitempty"`
+
+	ProductId string `json:"productId,omitempty"`
+
+	AssignedProducts []ProductCrossSellingAssignedProducts `json:"assignedProducts,omitempty"`
+
+	Translated interface{} `json:"translated,omitempty"`
 
 	SortDirection string `json:"sortDirection,omitempty"`
 
 	Limit float64 `json:"limit,omitempty"`
 
+	ProductStreamId string `json:"productStreamId,omitempty"`
+
+	ProductStream *ProductStream `json:"productStream,omitempty"`
+
+	CreatedAt time.Time `json:"createdAt,omitempty"`
+
 	Id string `json:"id,omitempty"`
 
-	Position float64 `json:"position,omitempty"`
+	Type string `json:"type,omitempty"`
+
+	ProductVersionId string `json:"productVersionId,omitempty"`
+
+	Product *Product `json:"product,omitempty"`
 
 	SortBy string `json:"sortBy,omitempty"`
 
 	Translations []ProductCrossSellingTranslation `json:"translations,omitempty"`
 
 	UpdatedAt time.Time `json:"updatedAt,omitempty"`
-
-	CreatedAt time.Time `json:"createdAt,omitempty"`
-
-	Translated interface{} `json:"translated,omitempty"`
-
-	Name string `json:"name,omitempty"`
-
-	Active bool `json:"active,omitempty"`
-
-	ProductId string `json:"productId,omitempty"`
-
-	Product *Product `json:"product,omitempty"`
-
-	ProductStreamId string `json:"productStreamId,omitempty"`
-
-	AssignedProducts []ProductCrossSellingAssignedProducts `json:"assignedProducts,omitempty"`
 }
 
 type ProductCrossSellingCollection struct {

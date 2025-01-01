@@ -99,45 +99,43 @@ func (t ProductReviewRepository) Delete(ctx ApiContext, ids []string) (*http.Res
 }
 
 type ProductReview struct {
+	Title string `json:"title,omitempty"`
+
+	Content string `json:"content,omitempty"`
+
+	CreatedAt time.Time `json:"createdAt,omitempty"`
+
+	ProductVersionId string `json:"productVersionId,omitempty"`
+
+	SalesChannelId string `json:"salesChannelId,omitempty"`
+
+	ExternalUser string `json:"externalUser,omitempty"`
+
+	Status bool `json:"status,omitempty"`
+
 	UpdatedAt time.Time `json:"updatedAt,omitempty"`
+
+	Product *Product `json:"product,omitempty"`
+
+	Id string `json:"id,omitempty"`
 
 	ProductId string `json:"productId,omitempty"`
 
 	CustomerId string `json:"customerId,omitempty"`
 
-	SalesChannelId string `json:"salesChannelId,omitempty"`
-
 	ExternalEmail string `json:"externalEmail,omitempty"`
 
-	Title string `json:"title,omitempty"`
-
-	Points float64 `json:"points,omitempty"`
-
-	CreatedAt time.Time `json:"createdAt,omitempty"`
-
-	Id string `json:"id,omitempty"`
-
-	ExternalUser string `json:"externalUser,omitempty"`
-
-	Content string `json:"content,omitempty"`
-
-	SalesChannel *SalesChannel `json:"salesChannel,omitempty"`
+	Customer *Customer `json:"customer,omitempty"`
 
 	Language *Language `json:"language,omitempty"`
 
 	LanguageId string `json:"languageId,omitempty"`
 
-	Status bool `json:"status,omitempty"`
+	Points float64 `json:"points,omitempty"`
 
 	Comment string `json:"comment,omitempty"`
 
-	Customer *Customer `json:"customer,omitempty"`
-
-	ProductVersionId string `json:"productVersionId,omitempty"`
-
-	Product *Product `json:"product,omitempty"`
-
-	CustomFields interface{} `json:"customFields,omitempty"`
+	SalesChannel *SalesChannel `json:"salesChannel,omitempty"`
 }
 
 type ProductReviewCollection struct {

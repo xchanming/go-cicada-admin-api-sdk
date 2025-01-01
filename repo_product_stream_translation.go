@@ -101,21 +101,21 @@ func (t ProductStreamTranslationRepository) Delete(ctx ApiContext, ids []string)
 type ProductStreamTranslation struct {
 	Name string `json:"name,omitempty"`
 
+	UpdatedAt time.Time `json:"updatedAt,omitempty"`
+
+	ProductStream *ProductStream `json:"productStream,omitempty"`
+
+	Language *Language `json:"language,omitempty"`
+
 	Description string `json:"description,omitempty"`
 
 	CustomFields interface{} `json:"customFields,omitempty"`
 
-	ProductStream *ProductStream `json:"productStream,omitempty"`
-
 	CreatedAt time.Time `json:"createdAt,omitempty"`
-
-	UpdatedAt time.Time `json:"updatedAt,omitempty"`
 
 	ProductStreamId string `json:"productStreamId,omitempty"`
 
 	LanguageId string `json:"languageId,omitempty"`
-
-	Language *Language `json:"language,omitempty"`
 }
 
 type ProductStreamTranslationCollection struct {
