@@ -125,8 +125,6 @@ type Order struct {
 
 	Price interface{} `json:"price,omitempty"`
 
-	Documents []Document `json:"documents,omitempty"`
-
 	VersionId string `json:"versionId,omitempty"`
 
 	OrderNumber string `json:"orderNumber,omitempty"`

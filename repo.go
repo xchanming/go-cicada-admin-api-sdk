@@ -27,8 +27,6 @@ type Repository struct {
 
 	ProductTranslation *ProductTranslationRepository
 
-	Document *DocumentRepository
-
 	OrderDeliveryPosition *OrderDeliveryPositionRepository
 
 	OrderTag *OrderTagRepository
@@ -114,8 +112,6 @@ func NewRepository(client ClientService) Repository {
 	repo.ProductSortingTranslation = (*ProductSortingTranslationRepository)(&client)
 
 	repo.ProductTranslation = (*ProductTranslationRepository)(&client)
-
-	repo.Document = (*DocumentRepository)(&client)
 
 	repo.OrderDeliveryPosition = (*OrderDeliveryPositionRepository)(&client)
 

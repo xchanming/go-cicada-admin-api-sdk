@@ -179,8 +179,6 @@ type Language struct {
 
 	StateMachineStateTranslations []StateMachineStateTranslation `json:"stateMachineStateTranslations,omitempty"`
 
-	DocumentTypeTranslations []DocumentTypeTranslation `json:"documentTypeTranslations,omitempty"`
-
 	DeliveryTimeTranslations []DeliveryTimeTranslation `json:"deliveryTimeTranslations,omitempty"`
 
 	SeoUrlTranslations []SeoUrl `json:"seoUrlTranslations,omitempty"`
